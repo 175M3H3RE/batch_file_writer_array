@@ -1,8 +1,8 @@
 REM BEWARE CALLING THIS MULTIPLE TIMES
 REM VARIABLES ARE NOT RESET!
-for /f "delims=*" %%i in ('cd') DO set currentdir=%%i
+for /f "delims=*" %%i in    ('cd') DO set currentdir=%%i
 :back
-for /f "delims=" %%i in ('dir /b') do set rootfilename=%%i& goto next
+for /f "delims=" %%i in     ('dir /b') do set rootfilename=%%i& goto next
 :next
 if NOT DEFINED rootfilename ( set /a counter+=1 ) else ( goto HEREIAM )
 REM if %counter%==1 ( cd \ & (for /f "delims=*" %%i in ('cd') DO set currentdir=%%i)&(for /f "delims=" %%i in ('dir /b') do set rootfilename=%%i& goto nextt)) else ( goto HEREIAM )
