@@ -1,6 +1,7 @@
+@echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
-set /p arrname=
-set /p BATFILENAME=
+set /p arrname=Enter array name:
+set /p BATFILENAME=Enter Bat file name to save to:
 REM::start:::get:file::extension
 set /a NUM=%random%
 echo set str=%~x1 >temp_FILE_%NUM%.bat
